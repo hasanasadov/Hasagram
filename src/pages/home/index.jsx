@@ -45,7 +45,7 @@ const HomePage = () => {
       <PostFilter />
       <PostsWrapper>
         {pages?.map((page) =>
-          page.data.map((post) => <PostCard key={post.id} post={post} />)
+          page?.data?.map((post) => <PostCard key={post.id} post={post} />)
         )}
         {isLoading && (
           <>
